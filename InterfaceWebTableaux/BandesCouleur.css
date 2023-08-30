@@ -1,0 +1,13 @@
+.boite1 {
+    margin : 1em;
+    padding: 1em;
+    border : 2px solid black;
+}
+
+
+#boite2{
+    border : 1px solid blue ;
+    position  : fixed;
+    bottom: 50px;
+    right: 50px;
+}
