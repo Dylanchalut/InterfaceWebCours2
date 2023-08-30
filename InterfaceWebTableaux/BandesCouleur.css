@@ -11,3 +11,77 @@
     bottom: 50px;
     right: 50px;
 }
+
+#html{
+    position : fixed;
+    top : 50px;
+    left : 50px;
+    display : inline ;
+}
+
+#css{
+    display : inline ;
+}
+
+#javascript{
+    position : fixed;
+    top : 50px;
+    right : 50px;
+    display : inline ;
+}
+
+.custom-list {
+    list-style-type : none;
+    margin: 0;
+    padding : 0;
+}
+
+.nav {
+    background-color: darkgray;
+    padding: 1em;
+}
+
+.custom-list li {
+    display: inline-block;
+}
+
+.custom-list li a{
+    color : black;
+    text-decoration: none;
+    padding: 1em;
+    text-align: center;
+}
+
+.item-droit{
+    float : right;
+}
+
+.custom-list li a:hover{
+    font-weight: bold;
+}
+
+
+.dropdown{
+    position : relative;
+    display : inline-block;
+}
+
+.dropdown-content{
+    display : none;
+    position : absolute;
+}
+
+.dropdown:hover .dropdown-content{
+    display : block;
+    background-color: white;
+}
+
+.dropdown-content a{
+    color : white;
+    text-decoration: none;
+    display : block;
+}
+
+.dropdown-content a:hover{
+    background-color: greenyellow;
+}
