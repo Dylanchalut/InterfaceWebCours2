@@ -8,8 +8,12 @@ nav ul li {
     margin : auto;
     padding : 1em;
     border : 1em lightsalmon;
-    border-top-left-radius: 3em;
-    border-bottom-right-radius: 3em;
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
     border-style : outset;
+    width: 10em;
+    height: 0.1em;
+    border-width: 0.5em;
 
 }
+

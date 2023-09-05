@@ -1,0 +1,18 @@
+label{
+    display: block;
+    width : 75px;
+    float: left;
+}
+
+input{
+    display: block;
+    width: 300px;
+}
+
+br{
+
+}
+
+#submit{
+    width: 408px;
+}
