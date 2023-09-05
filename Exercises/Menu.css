@@ -1,0 +1,15 @@
+.custom-list {
+    list-style-type : none;
+    margin: 0;
+    padding : 0;
+}
+
+nav ul li {
+    margin : auto;
+    padding : 1em;
+    border : 1em lightsalmon;
+    border-top-left-radius: 3em;
+    border-bottom-right-radius: 3em;
+    border-style : outset;
+
+}
