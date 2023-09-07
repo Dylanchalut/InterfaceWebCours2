@@ -1,19 +1,35 @@
-.custom-list {
+.custom-list  {
     list-style-type : none;
     margin: 0;
     padding : 0;
 }
+.custom-list li a{
+    color: black;
+    text-decoration: none;
+}
 
 nav ul li {
-    margin : auto;
+    margin : 0.5em;
     padding : 1em;
     border : 1em lightsalmon;
     border-top-left-radius: 2em;
     border-bottom-right-radius: 2em;
     border-style : outset;
-    width: 10em;
+    width: 15em;
     height: 0.1em;
     border-width: 0.5em;
+    background-color: lightyellow;
+    text-align: left;
+    display: block;
+    position: static;
 
+}
+
+ul li:hover {
+    background-color: lightcoral;
+    color: coral;
+}
+ul li a:hover {
+    color: orange;
 }
 
