@@ -1,0 +1,10 @@
+.bloc{
+    display: block;
+}
+
+.BoiteContact{
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+
+}

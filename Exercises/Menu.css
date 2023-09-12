@@ -25,11 +25,9 @@ nav ul li {
 
 }
 
-ul li:hover {
+ul li:hover, ul li:hover a {
     background-color: lightcoral;
-    color: coral;
-}
-ul li a:hover {
     color: orange;
 }
+
 
