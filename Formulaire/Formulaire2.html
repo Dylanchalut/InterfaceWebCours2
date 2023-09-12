@@ -9,34 +9,62 @@
 <main>
     <h1>Formulaire de paiement</h1>
     <form>
-        <h3>Informations de contact</h3>
-        <section class="BoiteContact">
-            <label class="bloc">
-                Nom :
-                <input type="text">
-            </label>
-            <label>
-                Courriel :
-                <input type="email">
-            </label>
-            <label class="bloc" for="province">
-                Province :
-                <select name="province" id="province">
-                    <option value="Alberta">Alberta</option>
-                    <option value="Colombie-Britannique">Colombie-Britannique</option>
-                    <option value="Manitoba">Manitoba</option>
-                    <option value="Nouveau-Brunswick">Nouveau-Brunswick</option>
-                    <option value="Terre-Neuve-et-Labrador">Terre-Neuve-et-Labrador</option>
-                    <option value="Territoires du Nord-Ouest">Territoires du Nord-Ouest</option>
-                    <option value="Nouvelle-Écosse">Nouvelle-Écosse</option>
-                    <option value="Nunavut">Nunavut</option>
-                    <option value="Ontario">Ontario</option>
-                    <option value="Île-du-Prince-Édouard">Île-du-Prince-Édouard</option>
-                    <option value="Québec">Québec</option>
-                    <option value="Saskatchewan">Saskatchewan</option>
-                    <option value="Yukon">Yukon</option>
-                </select>
-            </label>
+        <section class="Boite">
+            <h3>Informations de contact</h3>
+            <section class="BoiteContact">
+                <div class="Espacement">
+                    <label for="Nom" class="bloc">Nom :</label>
+                    <input type="text" id="Nom" name="Nom">
+                </div>
+
+                <div class="Espacement">
+                    <label for="Courriel" class="bloc">Courriel :</label>
+                    <input type="email" id="Courriel" name="Courriel" placeholder="ex:123@gmail.com">
+                </div>
+                <div class="Espacement">
+                    <label class="bloc" for="province">Province :</label>
+                    <select name="province" id="province">
+                        <option value="Alberta">Alberta</option>
+                        <option value="Colombie-Britannique">Colombie-Britannique</option>
+                        <option value="Manitoba">Manitoba</option>
+                        <option value="Nouveau-Brunswick">Nouveau-Brunswick</option>
+                        <option value="Terre-Neuve-et-Labrador">Terre-Neuve-et-Labrador</option>
+                        <option value="Territoires du Nord-Ouest">Territoires du Nord-Ouest</option>
+                        <option value="Nouvelle-Écosse">Nouvelle-Écosse</option>
+                        <option value="Nunavut">Nunavut</option>
+                        <option value="Ontario">Ontario</option>
+                        <option value="Île-du-Prince-Édouard">Île-du-Prince-Édouard</option>
+                        <option value="Québec">Québec</option>
+                        <option value="Saskatchewan">Saskatchewan</option>
+                        <option value="Yukon">Yukon</option>
+                    </select>
+                </div>
+            </section>
+        </section>
+        <section class="Boite">
+            <h3>Informations de contact</h3>
+            <section class="BoitePaiement">
+                <div class="Espacement bloc2">
+                    <label>Type de paiement :</label>
+                    <input type="radio" id="Visa" name="carte">
+                    <label for="Visa">Visa</label>
+                    <input type="radio" id="MasterCard" name="carte">
+                    <label for="MasterCard">MasterCard</label>
+                    <input type="radio" id="AmericanExpress" name="carte">
+                    <label for="AmericanExpress">American Express</label>
+                </div>
+                <div class="Espacement">
+                    <label for="Numero" class="bloc">Numéro :</label>
+                    <input type="text" id="Numero" name="Numero">
+
+                </div>
+
+
+
+
+
+
+            </section>
         </section>
 
 
@@ -64,8 +92,6 @@
 
 
 
-        <button type="submit">Envoyer</button>
-        <button type="reset">Annuler</button>
     </form>
 </main>
 </body>

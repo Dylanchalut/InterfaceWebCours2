@@ -1,10 +1,78 @@
 .bloc{
     display: block;
+    width : 75px;
+    float: left;
+
 }
+
+.bloc2{
+    display: inline;
+    float: left;
+
+}
+
+
+input{
+    display: block;
+    width: 150px;
+    height: 15px;
+}
+
+select{
+    display: block;
+    width: 158px;
+    height: 20px;
+}
+
+.Boite{
+    margin: 20px;
+}
+
 
 .BoiteContact{
     border-style: solid;
     border-width: 1px;
-    padding: 5px;
+    padding: 0;
+    width: 30%;
+    margin: 0;
+    height: 125px;
+}
 
+.BoitePaiement{
+    border-style: solid;
+    border-width: 1px;
+    padding: 0;
+    width: 30%;
+    margin: 0;
+    height: 100px;
+}
+
+.Espacement{
+    display: block;
+    margin: 18px;
+}
+
+h3{
+    margin: 0;
+}
+
+#Visa{
+    display: inline;
+    padding: 0;
+    margin: 10px;
+    width: auto;
+}
+
+#MasterCard{
+    display: inline;
+    padding: 0;
+    margin: 10px;
+    width: auto;
+}
+
+#AmericanExpress{
+    display: inline;
+    padding: 0;
+    margin: 10px;
+    width: auto;
 }
