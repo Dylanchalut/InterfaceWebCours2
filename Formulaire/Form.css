@@ -16,3 +16,15 @@ br{
 #submit{
     width: 408px;
 }
+
+input:focus{
+    background-color: yellow;
+}
+
+input:invalid{
+    color: red;
+}
+
+input:valid{
+    background-color: greenyellow;
+}

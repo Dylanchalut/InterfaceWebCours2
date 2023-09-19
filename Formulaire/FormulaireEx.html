@@ -9,16 +9,16 @@
 <form>
     <h1>Formulaire</h1>
     <label for="nom">Nom</label>
-    <input type="text" name="nom" id="nom">
-
+    <input type="text" name="nom" id="nom" required minlength="2" maxlength="20" pattern="[A-z\- ]+" title="Utiliser que des lettres tirets et espaces">
+    <br>
     <label for="prenom">Prenom</label>
     <input type="text" name="prenom" id="prenom">
-
+    <br>
     <label for="email">Email</label>
-    <input type="email" name="email" id="email">
-
+    <input type="email" name="email" id="email" pattern="[a-z\d\-\._]+@[a-z\-\._]+\.[a-z]{2,3}" placeholder="exemple@gmail.com">
+    <br>
     <label for="telephone">Telephone</label>
-    <input type="tel" name="telephone" id="telephone">
+    <input type="tel" name="telephone" id="telephone" placeholder="819-444-4444" pattern="[\d]{3}-[\d]{3}-[\d]{4}">
     <br>
     <label for="password">Mot de passe</label>
     <input type="password" name="password" id="password">
