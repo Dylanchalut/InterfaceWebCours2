@@ -22,3 +22,79 @@
     text-align: center;
     font-weight: bold;
 }
+
+.Div1{
+    float: left;
+}
+
+.Bloc-Ma-Liste{
+    float: right;
+}
+
+.maDiv{
+    width: 800px;
+}
+
+.list{
+    border: black solid 1px;
+    border-radius: 5px;
+    width: 400px;
+
+}
+
+.pBocBorder{
+    border-bottom: black solid 1px;
+    margin: 0;
+    padding: 5px;
+}
+
+.pBocBorder2{
+    border-bottom: black 1px;
+    margin: 0;
+    padding: 5px;
+}
+
+span{
+    float: right;
+}
+
+.total{
+    float: right;
+    margin: 0;
+}
+
+label{
+    display: block;
+    width : 100px;
+    float: left;
+}
+.input{
+    display: inline-block;
+    width: 290px;
+    height: 20px;
+}
+
+.labelValeur{
+    display: block;
+    width : 125px;
+    float: left;
+}
+
+.inputValeur{
+    display:block;
+    width: 300px;
+    margin: 8px 0;
+}
+
+.labelDescription{
+    display: block;
+    width : 125px;
+    float: left;
+}
+
+.inputDescription{
+    display:block;
+    width: 300px;
+    margin: 8px 0;
+}
+

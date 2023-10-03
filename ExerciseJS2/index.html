@@ -27,32 +27,44 @@
     <h2>Ma liste de cadeaux interactive</h2>
     <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
                                     ami.e.s.</p>
-    <h3 class="mb-3">Ajouter un item à la liste</h3>
-    <div class="mb-3">
-      <p>Description :</p>
-      <input type="text" id="desc" name="essai" required></input>
-    </div>
-    <div class="mb-4">
-      <span>Valeur estimée ($) :</span><br>
-      <input type="number" id="valeur">
-    </div>
-    <div class="d-grid gap-2">
-      <button>Ajouter</button>
-      <br>
-      <button>Annuler</button>
-    </div>
-    <h3>Ma liste</h3>
-    <p class="list">
-      <p>Crocs des fêtes : <span>14$</span></p>
-      <p>Une tuque des fêtes :<span>42$</span></p>
-      <p>Un chandail laid des fêtes :<span>25$</span></p>
-      <p>Total: 81$</p>
-    </p>
-    <p class="col-form-label h3">Destinataire:</p>
-    <input id="email" type="text">
-    <div>
-      <button>Confirmer et envoyer</button>
-      <button>Recommencer</button>
+    <div class="maDiv">
+      <div class="Div1">
+        <h3>Ajouter un item à la liste</h3>
+        <div>
+          <label class="labelDescription" for="desc">Description :</label>
+          <input class="inputDescription" type="text" id="desc" name="essai" required>
+        </div>
+        <div>
+          <label class="labelValeur" for="valeur">Valeur estimée ($):</label>
+          <input class="inputValeur" type="number" id="valeur">
+        </div>
+        <div>
+          <button>Ajouter</button>
+          <br>
+          <button>Annuler</button>
+        </div>
+      </div>
+
+      <div class = Bloc-Ma-Liste>
+        <h3>Ma liste</h3>
+        <div class="list">
+          <p class="pBocBorder">Crocs des fêtes<span>14$</span></p>
+          <p class="pBocBorder">Une tuque des fêtes<span>42$</span></p>
+          <p class="pBocBorder2">Un chandail laid des fêtes<span>25$</span></p>
+        </div>
+        <p class="total">Total: 81$</p>
+        <br>
+        <br>
+        <div class="BlocDestinataire">
+          <label for="email">Destinataire:</label>
+          <input class="input" id="email" type="text">
+        </div>
+        <div>
+          <button>Confirmer et envoyer</button>
+          <button>Recommencer</button>
+        </div>
+      </div>
+
     </div>
   </body>
 </html>
