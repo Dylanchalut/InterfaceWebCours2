@@ -5,66 +5,69 @@
     <title>Liste interactive de cadeaux de Noël</title>
     <meta name="description" content="Créer votre liste de cadeaux et envoyez-là à vos ami.e.s">
     <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="Css.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JQuery.js" defer></script>
   </head>
   <body>
+    <form id="form" onsubmit="event.preventDefault()">
   <!-- barre de navigation-->
-    <nav>
-      <ul class="nav-item">
-        <li>
-          <a class="navbar-brand" href="#">L'Atelier du bonheur Mercantile</a>
-        </li>
-        <li>
-          <a class="nav-link active" href="#">Ma liste</a>
-        </li>
-        <li>
-          <a class="nav-link" aria-current="page" href="#">Listes de mes ami.e.s</a>
-        </li>
-      </ul>
-    </nav>
+      <nav>
+        <ul class="nav-item">
+          <li>
+            <a class="navbar-brand" href="#">L'Atelier du bonheur Mercantile</a>
+          </li>
+          <li>
+            <a class="nav-link active" href="#">Ma liste</a>
+          </li>
+          <li>
+            <a class="nav-link" aria-current="page" href="#">Listes de mes ami.e.s</a>
+          </li>
+        </ul>
+      </nav>
 
-    <h2>Ma liste de cadeaux interactive</h2>
-    <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
-                                    ami.e.s.</p>
-    <div class="maDiv">
-      <div class="Div1">
-        <h3>Ajouter un item à la liste</h3>
-        <div>
-          <label class="labelDescription" for="desc">Description :</label>
-          <input class="inputDescription" type="text" id="desc" name="essai" required>
+      <h2>Ma liste de cadeaux interactive</h2>
+      <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
+                                      ami.e.s.</p>
+      <div class="maDiv">
+        <div class="Div1">
+          <h3>Ajouter un item à la liste</h3>
+          <div>
+            <label class="labelDescription" for="desc">Description :</label>
+            <input class="inputDescription" type="text" id="desc" name="essai" required>
+          </div>
+          <div>
+            <label class="labelValeur" for="valeur">Valeur estimée ($):</label>
+            <input class="inputValeur" type="number" id="valeur">
+          </div>
+          <div>
+            <button id="ajouter">Ajouter</button>
+            <br>
+            <button>Annuler</button>
+          </div>
         </div>
-        <div>
-          <label class="labelValeur" for="valeur">Valeur estimée ($):</label>
-          <input class="inputValeur" type="number" id="valeur">
-        </div>
-        <div>
-          <button onclick="Ajouter()">Ajouter</button>
+
+        <div class = Bloc-Ma-Liste>
+          <h3>Ma liste</h3>
+          <div class="list" id="liste">
+            <p class="pBocBorder">Crocs des fêtes<span>14$</span></p>
+            <p class="pBocBorder">Une tuque des fêtes<span>42$</span></p>
+            <p class="pBocBorder2">Un chandail laid des fêtes<span>25$</span></p>
+          </div>
+          <p class="total" id="totals">Total: 81$</p>
           <br>
-          <button>Annuler</button>
+          <br>
+          <div class="BlocDestinataire">
+            <label for="email">Destinataire:</label>
+            <input class="input" id="email" type="text">
+          </div>
+          <div>
+            <button>Confirmer et envoyer</button>
+            <button>Recommencer</button>
+          </div>
         </div>
-      </div>
 
-      <div class = Bloc-Ma-Liste>
-        <h3>Ma liste</h3>
-        <div class="list" id="liste">
-          <p class="pBocBorder">Crocs des fêtes<span>14$</span></p>
-          <p class="pBocBorder">Une tuque des fêtes<span>42$</span></p>
-          <p class="pBocBorder2">Un chandail laid des fêtes<span>25$</span></p>
-        </div>
-        <p class="total" id="totals">Total: 81$</p>
-        <br>
-        <br>
-        <div class="BlocDestinataire">
-          <label for="email">Destinataire:</label>
-          <input class="input" id="email" type="text">
-        </div>
-        <div>
-          <button>Confirmer et envoyer</button>
-          <button>Recommencer</button>
-        </div>
       </div>
-
-    </div>
+    </form>
   </body>
 </html>
