@@ -21,7 +21,7 @@ function copier()
 
 $("form").css("background-color", "yellow");
 
-$("h1").first().text("Formulaire JQuery");
+$("h1").first().text("Formulaire JQueryExercise1");
 
 $("form").append("<input type='reset'>");
 

@@ -18,17 +18,7 @@ function Ajouter()
 }
  */
 
-/*
-$("form").css("background-color", "yellow");
 
-$("h1").first().text("Formulaire JQuery");
-
-$("form").append("<input type='reset'>");
-
-$("#copier").click(function(){
-    $("form").append("<p>" + $("#nom").val() + "</p>");
-});
- */
 
 $("#ajouter").click(function(){
     $("#liste").css("border-top", "black solid 1px");

@@ -1,0 +1,32 @@
+.BoxSection div {
+    display: inline;
+    width: 500px;
+}
+
+.BoxTable{
+    position: fixed;
+    right: 0;
+
+}
+
+table{
+    border: solid black 1px;
+    border-collapse: collapse;
+}
+
+thead th{
+    border: solid black 1px;
+    text-align: center;
+}
+
+tbody tr, tbody td{
+    border: solid black 1px;
+    text-align: left;
+}
+.nombres div{
+    border: solid black 1px;
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    margin: 1px;
+}
