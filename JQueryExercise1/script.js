@@ -17,6 +17,16 @@ function Validation(){
         $("tbody").append("<td>" + "Réussi" + "</td>");
 
     }
+    else
+        tentative--
+        if (tentative === 0){
+            $("#T").text("Plus aucune tentatives")
+            }
+        else{
+            $("#T").text("Tentatives restante :")
+        }
+
+
 
 }
 
