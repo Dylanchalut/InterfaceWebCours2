@@ -19,11 +19,11 @@ function copier()
 }
  */
 
-$("form").css("background-color", "yellow");
+//$("form").css("background-color", "yellow");
 
-$("h1").first().text("Formulaire JQueryExercise1");
+//$("h1").first().text("Formulaire JQueryExercise1");
 
-$("form").append("<input type='reset'>");
+//$("form").append("<input type='reset'>");
 
 $("#copier").click(function(){
     $("form").append("<p>" + $("#nom").val() + "</p>");
