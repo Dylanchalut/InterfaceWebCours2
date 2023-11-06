@@ -26,6 +26,6 @@ function copier()
 //$("form").append("<input type='reset'>");
 
 $("#copier").click(function(){
-    $("form").append("<p>" + $("#nom").val() + "</p>");
+    $("#ajouts").append("<p>" + $("#nom").val() + "</p>");
 });
 
