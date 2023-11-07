@@ -13,7 +13,7 @@
         <h1>Formulaire</h1>
         <div class="mb-3 row">
             <label for="nom" class="form-label col-4">Nom</label>
-            <input class="form-control col-lg-8" type="text" name="nom" id="nom" required minlength="2" maxlength="20" pattern="[A-z\- ]+" title="Utiliser que des lettres tirets et espaces">
+            <input class="form-control col-lg-8" type="text" name="nom" id="nom" required minlength="2" maxlength="20" pattern="[A-Z]{1}[a-z]{2,19}" title="Utiliser que des lettres tirets et espaces">
         </div>
         <div class="mb-3 row">
             <label for="prenom" class="form-label col-4">Prenom</label>
@@ -21,7 +21,7 @@
         </div>
         <div class="mb-3 row">
             <label for="email" class="form-label col-4">Email</label>
-            <input class="form-control col-lg-8" type="email" name="email" id="email" required pattern="[a-z\d\-\._]+@[a-z\-\._]+\.[a-z]{2,3}" placeholder="exemple@gmail.com">
+            <input class="form-control col-lg-8" type="email" name="email" id="email" required pattern="[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,3}" placeholder="exemple@gmail.com">
             <div class="col-4"></div>
             <div id="emailHelp" class="form-text col-lg-8">We'll never share your email with anyone else.</div>
         </div>
