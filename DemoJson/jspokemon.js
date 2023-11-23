@@ -16,6 +16,7 @@ function Pokemon(nom="", pts_vie=2){
  * 4-porsuivre l'envoi
  */
 $("form").on("submit", function(event){
+
     const pokemon = new Pokemon($("#pokemon").val(), $("#pts_vie").val());
     sessionStorage.setItem("pokemon", JSON.stringify(pokemon))
 })

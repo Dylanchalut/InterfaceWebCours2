@@ -26,6 +26,10 @@ function AjoutezJoueur() {
         $('#NomJoueur').val('');
         return;
     }
+        else{
+            $("#ErreurNom").text("");
+
+    }
 
     //Vérifie si ses faux et affiche le message d'erreur
     if(!validateCourriel(CourrielJ)){
