@@ -11,6 +11,17 @@
 <body>
 <main class="container">
     <h1>Nos aventuriers</h1>
+    <form onsubmit="ajouter()">
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="nom" required>
+        </div>
+        <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" class="form-control" id="age" required min="0">
+        </div>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
     <ul id="aventuriers" class="row"></ul>
     <p class="alert alert-danger d-none" role="alert"></p>
     <input type="button" onclick="afficherTout()" class="btn btn-primary" value="Afficher tout">

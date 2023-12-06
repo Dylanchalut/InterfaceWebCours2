@@ -11,13 +11,13 @@ function PersonnageCreation(montant_argent = 0,score_attaque = 0,score_defense =
     this.ScoreDefense = score_defense;
 }
 
-$(document).ready(function(){
-    const statistique = new PersonnageCreation(
-        $("#argent").text(600),
-        $("#attaque").text(6),
-        $("#defense").text(3)
-    )
-});
+
+const statistique = new PersonnageCreation(
+    $("#argent").text(600),
+    $("#attaque").text(6),
+    $("#defense").text(3)
+)
+
 
 /*
 Fonction qui au chargement de la page
@@ -64,20 +64,47 @@ fetch('items.json')
     });
 
 function AchatItemModifiez(objet){
-    objet.items.forEach(objet)
-
-
-
-
+    $("#achat").val();
+        if (statistique.MontantArgent >= objet.prix){
+            statistique.MontantArgent -= objet.prix;
+            statistique.ScoreAttaque += objet.attack;
+            statistique.ScoreDefense += objet.defense;
+            // Mettre à jour les propriétés du personnage dans la page HTML
+            $("#argent").text(statistique.MontantArgent);
+            $("#attaque").text(statistique.ScoreAttaque);
+            $("#defense").text(statistique.ScoreDefense) ;
+        } else{
+            $("#erreur").removeClass('invisible');
+        }
 }
 
 
-$("form").on("submit", function(event){
 
+
+
+
+
+$("form").on("submit", function(event){
+    $("#achat").val();
+    AchatItemModifiez()
 })
 
 
 /*
+ acheterItem(item) {
+    if (this.argent >= item.prix) {
+      this.argent -= item.prix;
+      this.attack += item.attack;
+      this.defense += item.defense;
+      // Mettre à jour les propriétés du personnage dans la page HTML
+      document.getElementById("argent").textContent = this.argent;
+      document.getElementById("attack").textContent = this.attack;
+      document.getElementById("defense").textContent = this.defense;
+    } else {
+      alert("Vous n'avez pas assez d'argent pour acheter cet item !");
+    }
+ }
+}
 // Définir un objet Item avec les statistiques de l'item
 class Item {
  constructor(nom, prix, attack, defense) {
