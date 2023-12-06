@@ -12,12 +12,14 @@ function PersonnageCreation(montant_argent = 0,score_attaque = 0,score_defense =
 }
 
 
-const statistique = new PersonnageCreation(
-    $("#argent").text(600),
-    $("#attaque").text(6),
-    $("#defense").text(3)
-)
+const statistique = new PersonnageCreation(600,6,3)
+MisAJour()
+function MisAJour(){
 
+    $("#argent").text(statistique.MontantArgent);
+    $("#attaque").text(statistique.ScoreAttaque);
+    $("#defense").text(statistique.ScoreDefense);
+}
 
 /*
 Fonction qui au chargement de la page
@@ -63,31 +65,36 @@ fetch('items.json')
         $('.alert').text(error.message);
     });
 
-function AchatItemModifiez(objet){
-    $("#achat").val();
-        if (statistique.MontantArgent >= objet.prix){
-            statistique.MontantArgent -= objet.prix;
-            statistique.ScoreAttaque += objet.attack;
-            statistique.ScoreDefense += objet.defense;
-            // Mettre à jour les propriétés du personnage dans la page HTML
-            $("#argent").text(statistique.MontantArgent);
-            $("#attaque").text(statistique.ScoreAttaque);
-            $("#defense").text(statistique.ScoreDefense) ;
-        } else{
-            $("#erreur").removeClass('invisible');
-        }
+
+// Fonction qui gère l'achat d'un objet
+function AchatItemModifiez(e){
+    e.preventDefault(); // Annule le comportement par défaut du formulaire
+
+    fetch('items.json')
+        .then(function(reponse){
+            if(!reponse.ok){
+                throw new Error ("Erreur"+reponse.status)
+            }
+            return reponse.json()
+        })
+        .then(function(obj){
+            obj.items.forEach(function(objet){
+                if ($("#achat option:selected").text() === objet.nom)
+                    if (statistique.MontantArgent >= objet.prix.replace("$", "")){
+                        statistique.MontantArgent -= objet.prix.replace("$", "");
+                        statistique.ScoreAttaque += objet.attaque;
+                        statistique.ScoreDefense += objet.defense;
+                        // Mettre à jour les propriétés du personnage dans la page HTML
+                        MisAJour()
+                        $("#erreur").addClass('invisible');
+                    } else{
+                        $("#erreur").removeClass('invisible');
+                    }
+            })
+        })
 }
 
-
-
-
-
-
-
-$("form").on("submit", function(event){
-    $("#achat").val();
-    AchatItemModifiez()
-})
+$("form").on("submit", AchatItemModifiez)
 
 
 /*
