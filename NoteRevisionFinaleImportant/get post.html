@@ -1,0 +1,43 @@
+dans la balisse form mettre action = "mailto:exemple@mail.com et method = "post"
+
+pour cacher une certaine donner, il faut enlever le name
+
+
+Une Autre mÃ©thode
+
+dans la balisse form mettre action = "page2.html et method = "get"
+faire un fichier js et le'attacher a la page2.html et mettre les liens de jquery et bootstrap
+mettre titre dde page 2.html et L'appeler page2.html
+
+aller dans le javascript et mettre ce code
+
+//RÃ©cupÃ©rer les donnÃ©es du formulaire dans l'url
+let url = window.location.search.substring(1);
+console.log(url);
+let tableau = url.split("&");
+for (i = 0; i < tableau.length; i++)
+{let donnee = tableau[i].split("=")
+console.log(donnee[0]) //Nom des champs
+console.log(donnee[1]) //Valeurs des champs
+$("body").append("<p>" + donnee[0] +" : " + donnee[1].replace("%40","@") + "<p>")
+    }
+
+    rajouter des messages d'erreurs dans des div
+
+<div id = "Erreurnom" class = "alert-danger"></div>
+
+
+mettre dans le javascript principal
+
+//Valider le nom quand il est rentrÃ©
+$("#nom").blur(function ())
+{
+let nom = $("#nom").val()
+if (nom == "" || nom.length<2)
+{
+$("#Erreurnom").text("Le nom doit avoir au moins 2 lettres");
+}
+else{
+$("#Erreurnom").text("");
+}
+})

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Barre de menu CSS</title>
+    <link rel="stylesheet" href="BandesCouleur.css">
+</head>
+<body>
+<main>
+    <nav class = "nav">
+        <ul class = "custom-list">
+            <li class="dropdown">
+                <a href="hmtl">HTML</a>
+                <ul class="dropdown-content">
+                    <li>
+                        <a href="#" id="paragraphes">Paragraphes et entêtes</a>
+                    </li>
+                    <li>
+                        <a href="#" id="Contenu multimédia">Contenu multimédia</a>
+                    </li>
+                    <li>
+                        <a href="#" id="Listes et tableaux">Paragraphes et entêtes</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="css">CSS</a>
+            </li>
+            <li class = "item-droit">
+                <a href="javascript">JavaScript</a>
+            </li>
+        </ul>
+    </nav>
+
+
+</main>
+</body>
+</html>
+
+/*.dropdown{
+position : relative;
+display : inline-block;
+}
+
+.dropdown-content{
+display : none;
+position : absolute;
+background-color: black;
+padding: 0;
+}
+
+.dropdown:hover .dropdown-content{
+display : block;
+}
+
+.dropdown-content li a{
+color : white;
+text-decoration: none;
+display : block;
+}
+
+.dropdown-content a:hover{
+background-color: greenyellow;
+color : black;
+}*\

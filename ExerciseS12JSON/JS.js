@@ -11,7 +11,7 @@ function PersonnageCreation(montant_argent = 0,score_attaque = 0,score_defense =
     this.ScoreDefense = score_defense;
 }
 
-
+let liste =[];
 const statistique = new PersonnageCreation(600,6,3)
 MisAJour()
 function MisAJour(){
@@ -70,6 +70,7 @@ fetch('items.json')
 function AchatItemModifiez(e){
     e.preventDefault(); // Annule le comportement par défaut du formulaire
 
+
     fetch('items.json')
         .then(function(reponse){
             if(!reponse.ok){
@@ -79,20 +80,28 @@ function AchatItemModifiez(e){
         })
         .then(function(obj){
             obj.items.forEach(function(objet){
-                if ($("#achat option:selected").text() === objet.nom)
-                    if (statistique.MontantArgent >= objet.prix.replace("$", "")){
+                if ($("#achat option:selected").text() === objet.nom) {
+                    if (statistique.MontantArgent >= objet.prix.replace("$", "")) {
                         statistique.MontantArgent -= objet.prix.replace("$", "");
                         statistique.ScoreAttaque += objet.attaque;
                         statistique.ScoreDefense += objet.defense;
                         // Mettre à jour les propriétés du personnage dans la page HTML
                         MisAJour()
+                        liste.push(objet)
                         $("#erreur").addClass('invisible');
-                    } else{
+                    } else {
+                        sessionStorage.setItem('achat',JSON.stringify(liste));
+                        window.location.href = 'reception.html';
                         $("#erreur").removeClass('invisible');
                     }
+                }
+
+
             })
+
         })
 }
+
 
 $("form").on("submit", AchatItemModifiez)
 
